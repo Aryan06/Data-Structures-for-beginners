@@ -1,0 +1,2 @@
+# Data-Structures-for-beginners
+This repository is based on data structures tutorials for beginners who have just started ds algo. I will be doing this course in java as java is a reliable and object oriented programming language. After clearing the concepts and basics you can choose any programming language for doing data structures. Only difference is of syntax otherwise implementation is same in every programming language.
