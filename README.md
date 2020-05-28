@@ -21,7 +21,8 @@ The links are below:
 2. https://www.coursera.org/specializations/algorithms (By Stanford University on Coursera)
 
 3.1  https://www.coursera.org/learn/algorithms-part1  (Coursera)
-3.2. https://www.coursera.org/learn/algorithms-part2
+
+3.2. https://www.coursera.org/learn/algorithms-part2  (Coursera)
 
 4. https://www.edx.org/course/algorithms-2
 
