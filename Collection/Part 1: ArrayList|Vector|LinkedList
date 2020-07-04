@@ -1,0 +1,42 @@
+package DataStructures;
+
+import java.util.LinkedList;
+
+
+public class MyArrayList {
+
+	public static void main(String[] args) {
+
+     LinkedList<String> list = new LinkedList<String>(); //ctrl+shift+O
+     list.add("Aryan");
+		list.add("Messi");
+		list.add("Ronaldo");
+		list.add("Bruyne");
+		System.out.println(list.size()); //no. of objects stored in LinkedList
+		System.out.println(list.get(0)); //get the string on given index number
+		System.out.println(list);
+		
+		
+		 //ArrayList<String> list = new ArrayList<String>(); //ctrl+shift+O
+	     //list.add("Aryan");
+			//list.add("Messi");
+			//list.add("Ronaldo");
+		//	list.add("Bruyne");
+		//	System.out.println(list.size()); //no. of objects stored in ArrayList
+			//System.out.println(list.get(0)); //get the string on given index number
+			//System.out.println(list);
+		
+		
+		//Vector<String> list = new Vector<String>(); //ctrl+shift+O
+	     //list.add("Aryan");
+			//list.add("Messi");
+			//list.add("Ronaldo");
+		//	list.add("Bruyne");
+		//	System.out.println(list.size()); //no. of objects stored in Vector
+			//System.out.println(list.get(0)); //get the string on given index number
+			//System.out.println(list);
+
+		
+
+}
+}
