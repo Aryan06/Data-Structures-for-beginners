@@ -1,0 +1,50 @@
+#include<iostream>
+#include<queue>
+using namespace std;
+
+struct Node{
+    int data;
+    Node*left,*right;
+Node(int d){
+    data = d;
+    left = right = NULL;
+}
+};
+
+// Another method to create a Node :)
+// Node*newNode(int d){
+//     Node*temp = new Node();
+//     temp->data = d;
+//     temp->left = temp->right = NULL;
+//     return temp;
+// }
+void printTree(Node*root){
+    if(root==NULL) return;
+     queue<Node*> q;
+
+     q.push(root);
+
+     while(q.empty()==false){
+     Node*node = q.front();
+     cout<<node->data<<" ";
+     q.pop();
+
+     if(node->left!=NULL)
+     q.push(node->left);
+
+     if(node->right!=NULL)
+     q.push(node->right);
+     }
+
+}
+
+int main(){
+    Node*root = new Node(1);
+    root->left =  new Node(2);
+    root->right =  new Node(5);
+    root->left->left =  new Node(10);
+    root->left->right = new Node(20);
+
+    cout<<"Level Order Traversal :"<<" ";
+    printTree(root);
+}
