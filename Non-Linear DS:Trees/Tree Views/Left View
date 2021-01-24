@@ -1,0 +1,94 @@
+#include <bits/stdc++.h> 
+
+using namespace std; 
+
+// A Binary Tree Node 
+struct node { 
+	int data; 
+    node *left, *right; 
+}; 
+
+// A utility function to create a new 
+// Binary Tree node 
+ node* newNode(int d) 
+{ 
+	 node* temp = new node(); 
+	temp->data = d; 
+	temp->left = NULL; 
+	temp->right = NULL; 
+	return temp; 
+} 
+
+// Utility function to print the left view of 
+// the binary tree 
+void leftViewUtil( node* root) 
+{ 
+	if (root == NULL) 
+		return; 
+ queue<node*> q;
+	// Push root 
+	q.push(root); 
+
+	// Delimiter 
+	q.push(NULL); 
+
+	while (q.empty()==false) { 
+		node* temp = q.front(); 
+
+		if (temp) { 
+
+			// Prints first node 
+			// of each level 
+			cout << temp->data << " "; 
+
+			// Push children of all nodes at 
+			// current level 
+			while (q.front() != NULL) { 
+
+				// If left child is present 
+				// push into queue 
+				if (temp->left) 
+					q.push(temp->left); 
+
+				// If right child is present 
+				// push into queue 
+				if (temp->right) 
+					q.push(temp->right); 
+
+				// Pop the current node 
+				q.pop(); 
+
+				temp = q.front(); 
+			} 
+
+			// Push delimiter 
+			// for the next level 
+			q.push(NULL); 
+		} 
+
+		// Pop the delimiter of 
+		// the previous level 
+		q.pop(); 
+	} 
+} 
+
+// Function to print the leftView 
+// of Binary Tree 
+
+
+// Driver Code 
+int main() 
+{ 
+	 node* root = newNode(10); 
+	root->left = newNode(12); 
+	root->right = newNode(3); 
+	root->left->right = newNode(4); 
+	root->right->left = newNode(5); 
+	root->right->left->right = newNode(6); 
+	root->right->left->right->left = newNode(18); 
+	root->right->left->right->right = newNode(7); 
+
+	leftViewUtil(root); 
+
+	return 0; 
+} 
